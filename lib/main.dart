@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:toonflix/widgets/button.dart';
 import 'package:toonflix/widgets/currency_card.dart';
 
@@ -10,9 +8,14 @@ void main() {
 
 // class가 위젯이 되기 위해서는
 // 3개 중 하나를 extend 해야한다.
-// StatelessWidget
-// - 위젯을 보여주는 용도.
-// - build 메소드: 필수. 위젯을 빌드함
+// 1. StatelessWidget
+//    - 위젯을 보여주는 용도.
+//    - build 메소드: 필수. 위젯을 빌드함
+// 2. StatefulWidget
+//    - 두개의 파트(클래스)로 이루어짐.
+//    - 1) Widget
+//    - 2) State: 데이터, UI. 데이터에 따라 UI도 변함.
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -116,7 +119,9 @@ class App extends StatelessWidget {
                     Text(
                       'View All',
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.8), fontSize: 18),
+                        color: Colors.white.withOpacity(0.8),
+                        fontSize: 18,
+                      ),
                     ),
                   ],
                 ),
